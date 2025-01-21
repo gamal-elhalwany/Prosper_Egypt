@@ -1,0 +1,537 @@
+/* About Page styling */
+
+.nav-dropdown-list:hover .dropdown-menu {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+header {
+  height: 116px;
+}
+
+header .navbar {
+  height: 116px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 15px 0px 25px rgba(0, 0, 0, 0.5);
+  transition: all 1s ease-in-out;
+}
+
+header .navbar:hover {
+  background-color: #fff;
+}
+
+header .navbar .navbar-brand {
+  margin-left: 50px;
+}
+
+header .navbar .navbar-brand .logo-title {
+  float: right;
+}
+
+header > .navbar .navbar-brand .logo-title > p:first-child {
+  color: #000;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  transition: all 1s ease-in-out;
+}
+
+header > .navbar .navbar-brand .logo-title > p:last-child {
+  color: #000;
+  font-size: 12px;
+  font-family: Creato Display;
+  font-weight: 900;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: 10px;
+  word-wrap: break-word;
+  transition: all 1s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-item {
+  margin-right: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-item:hover {
+  transform: translateY(-10px);
+}
+
+.navbar .navbar-nav .nav-item a {
+  color: #000;
+  font-weight: 500;
+  font-size: large;
+  text-decoration: none;
+}
+
+.navbar:hover .navbar-nav .nav-item a {
+  color: #000;
+}
+
+.navbar:hover .navbar-brand .logo-title > p:first-child,
+.navbar:hover .navbar-brand .logo-title > p:last-child {
+  color: #000;
+}
+
+.navbar:hover .navbar-nav .nav-item:hover > a {
+  border-bottom: 3px solid #03846e;
+}
+
+.about-us {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.about-us .who-we h3 {
+  color: #ffb301;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.01px;
+  text-transform: capitalize;
+}
+
+.about-us .who-we h1 {
+  font-weight: 500;
+  font-size: 77px;
+  line-height: 91.48px;
+  letter-spacing: -2px;
+  width: 68%;
+  text-transform: capitalize;
+}
+
+.about-us .who-we p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23.76px;
+  letter-spacing: 1px;
+  color: #a7a7a7;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  text-transform: capitalize;
+}
+
+.expertise-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us .expertise {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #03846e;
+  padding-top: 75px;
+  transition: all 0.4s ease;
+}
+
+.about-us .expertise h1 {
+  font-weight: 400;
+  font-size: 100px;
+  letter-spacing: -6px;
+  height: 150px;
+  margin-bottom: 35px;
+  text-transform: capitalize;
+}
+
+.about-us .expertise h1 > span {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 83.16px;
+  letter-spacing: -6px;
+}
+
+.about-us .expertise p {
+  line-height: 28.51px;
+  font-weight: 500;
+  font-size: 23px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.about-us .expertise-overlay {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  padding-top: 75px;
+  left: 0;
+  top: -100%; /* to make the element on the top and slide-down smoothly */
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.overlay-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.expertise-container:hover .expertise-overlay {
+  top: 0;
+  opacity: 1;
+}
+
+.expertise-container:hover .expertise {
+  transform: translateY(100%);
+}
+
+.expertise-container:hover {
+  box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.about-us .expertise-overlay h1 {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 100px;
+  letter-spacing: -6px;
+  height: 150px;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 3;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.about-us .expertise-overlay h1 > span {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 83.16px;
+  letter-spacing: -6px;
+}
+
+.about-us .expertise-overlay p {
+  line-height: 28.51px;
+  font-weight: 500;
+  font-size: 23px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 3;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/*****************************************************************************************/
+/************************************** Our Story Styling *******************************/
+
+.our-story {
+  padding: 10px;
+  margin-top: 120px;
+}
+
+.our-story .image {
+  height: 300px;
+  padding: 20px;
+}
+
+.our-story .image > img {
+  width: 100%;
+  height: 70%;
+}
+
+.our-story .image > div {
+  text-align: left;
+  position: absolute;
+  left: 250px;
+  top: 65px;
+  z-index: 222;
+}
+
+.our-story .image h1 {
+  font-weight: 800;
+  font-size: 41.59px;
+  line-height: 49.41px;
+  color: #222323;
+  text-transform: uppercase;
+}
+
+.our-story .image p {
+  font-weight: 300;
+  font-size: 31.2px;
+  line-height: 31.06px;
+  letter-spacing: 33.8px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #222323;
+}
+
+.our-story .description h1 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 65.34px;
+  letter-spacing: -2px;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
+.our-story .description h1 > span {
+  color: #03846e;
+}
+
+.our-story .description p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23.76px;
+  letter-spacing: 1px;
+  color: #a7a7a7;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
+/*******************************************************************************************/
+/********************************* Start Why Prosper Section Stying ***********************/
+
+.why-prosper {
+  margin-top: 120px;
+  padding: 10px;
+}
+
+.why-prosper h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 65.34px;
+  letter-spacing: -2px;
+  text-transform: capitalize;
+}
+
+.why-prosper h1 > span {
+  color: #03846e;
+}
+
+.why-prosper .intro-section {
+  margin-bottom: 120px;
+}
+
+.why-prosper .intro-section > p {
+  margin-top: 30px;
+  color: #a7a7a7;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23.76px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.why-prosper .why-prosper-heading > h1 {
+  width: 80%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.why-prosper .why-prosper-heading > p {
+  font-weight: 200;
+  font-size: 72px;
+  margin-top: 30px;
+  color: #03846e;
+  display: none;
+  text-transform: capitalize;
+}
+
+.why-prosper .prosper-features > div {
+  margin-top: 30px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.why-prosper .prosper-features > div > h1 {
+  font-weight: 500;
+  font-size: 40px;
+  color: #031602;
+  line-height: 47.52px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.why-prosper .prosper-features > div > p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23.76px;
+  color: #a7a7a7;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
+.why-prosper .prosper-features:hover div {
+  opacity: 0.3;
+}
+
+.why-prosper .prosper-features > div:hover {
+  opacity: 1;
+}
+
+/*****************************************************************************************/
+/*************************** Start Section Vesion & Mission Styling **********************/
+
+.vision-mission {
+  margin-top: 120px;
+  padding: 10px;
+}
+
+.vision-mission .vision-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-mission .vision-child {
+  border: 1px solid #ccc;
+  color: #03846e;
+  text-align: center;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+
+.vision-mission .vision-child > h1 {
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 65.34px;
+  letter-spacing: -2px;
+  margin-top: 140px;
+}
+
+.vision-mission .vision-child > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.01px;
+  letter-spacing: 1px;
+  color: #a7a7a7;
+  margin-top: 20px;
+  width: 97%;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.vision-mission .vision-overlay {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.vision-mission .vision-overlay > h1 {
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 65.34px;
+  letter-spacing: -2px;
+  margin-top: 140px;
+  position: relative;
+  z-index: 3;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.vision-mission .vision-overlay > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.01px;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-top: 20px;
+  width: 97%;
+  text-transform: capitalize;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.vision-mission .vision-container:hover .vision-overlay {
+  top: 0;
+  opacity: 1;
+}
+
+.vision-mission .vision-container:hover .vision-child {
+  transform: translateY(100%);
+}
+
+.vision-mission .vision-container:hover {
+  box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.vision-mission .vision-child,
+.vision-mission .vision-overlay,
+.vision-mission .vision-shadow {
+  height: 420px;
+}
+
+/*****************************************************************************************/
+/***************************** Start Certificates Section Styling ***********************/
+
+.certificates {
+  padding: 10px;
+  margin-top: 150px;
+}
+
+.certificates h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 65.34px;
+  margin-bottom: 100px;
+}
+
+.certificates h1 > span {
+  color: #03846e;
+}
+
+.certificates .certificate-img {
+  height: 408px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50%;
+}
+
+/*****************************************************************************************/
+/*********************************** Start Media Screen Styling *************************/
+
+@media screen and (min-width: 769px) {
+  .why-prosper .why-prosper-heading > p.lg-screens {
+    display: block;
+  }
+
+  .why-prosper .why-prosper-heading > p.sm-screens {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-story .image > div {
+    position: inherit;
+  }
+
+  .why-prosper .why-prosper-heading > p.lg-screens {
+    display: none;
+  }
+
+  .why-prosper .why-prosper-heading > p.sm-screens {
+    display: block;
+    text-align: center;
+  }
+}

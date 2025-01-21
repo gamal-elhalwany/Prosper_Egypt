@@ -1,0 +1,279 @@
+.contact {
+	padding: 10px;
+	margin-top: 20px;
+}
+
+.contact .contact-intro > h3 {
+	color: #ffb301;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 19.01px;
+	letter-spacing: 1px;;
+	text-transform: capitalize;
+}
+
+.contact .contact-intro > h1 {
+	color: #000;
+	font-size: 77px;
+	font-weight: 500;
+	line-height: 91.48px;
+	letter-spacing: -2px;
+	color: #222323;
+	width: 75%;
+	margin-top: 20px;
+}
+
+.contact .contact-intro > p {
+	color: #a7a7a7;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 23.76px;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	width: 88%;
+}
+
+.contact .info-parent {
+	height: 127px;
+	border: 1px solid #ccc;
+	position: relative;
+	overflow: hidden;
+}
+
+.contact .info-parent .contact-info {
+	color: #03846E;
+	text-align: center;
+	transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+}
+
+.contact .info-parent h3 {
+	width: 332px;
+	color: #03846E;
+	font-weight: 500;;
+	font-size: 24px;
+	line-height: 28.51px;
+	text-align: center;
+	margin: 12% auto;
+	text-transform: capitalize;
+}
+
+.contact .info-parent h3.contact-address {
+	margin-top: 8%;
+}
+
+.contact .info-parent .contact-info-overlay {
+	background-size: cover;
+	background-position: center center;
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 2;
+	transition: opacity .3s ease;
+	-webkit-transition: opacity .4s ease-in-out;
+	-moz-transition: opacity .4s ease-in-out;
+	-ms-transition: opacity .4s ease-in-out;
+	-o-transition: opacity .4s ease-in-out;
+}
+
+.contact .info-parent .contact-info-overlay > h3 {
+	color: #fff;
+	position: relative;
+	z-index: 3;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.contact .info-parent:hover {
+	box-shadow: 10px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.contact .info-parent:hover .contact-info-overlay {
+	top: 0;
+	opacity: 1;
+}
+
+.contact .info-parent:hover .contact-info {
+	transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+}
+
+/*****************************************************************************************/
+/****************************** Start Inquiry Section Styling ***************************/
+
+.contact-inquiry {
+	padding: 10px;
+	margin-top: 70px;
+	border: 1px solid #03846E;
+}
+
+.contact-inquiry .inquiry-intro {
+	text-align: center;
+}
+
+.contact-inquiry .inquiry-intro > h1 {
+	color: #222323;
+	text-transform: capitalize;
+	text-align: center;
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 65.34px;
+	letter-spacing: -2px;
+	width: 45%;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+.contact-inquiry .inquiry-intro > h1 > span {
+	color: #03846E;
+}
+
+.contact-inquiry .inquiry-intro > p {
+	color: #8b8b8b;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 23.76px;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.contact-inquiry .contact-form > form {
+	font-size: 20px;
+	font-weight: 400;
+	color: #031602;
+	line-height: 23.76px;
+}
+
+.contact-inquiry .contact-form > form input {
+	height: 70px;
+	width: 100%;
+	display: block;
+}
+
+.contact-inquiry .contact-form > form {
+  	padding: 40px;
+  	padding-top: 10px;
+  	border-bottom-left-radius: 30px;
+  	border-bottom-right-radius: 30px;
+  	margin-top: 30px;
+}
+
+.contact-inquiry .contact-form > form label {
+  	color: #031602;
+  	font-size: 20px;
+  	font-weight: 400;
+  	line-height: 23.76px;
+  	text-transform: capitalize;
+}
+
+.contact-inquiry .contact-form > form input,
+.contact-inquiry .contact-form > form textarea,
+.contact-inquiry .contact-form > form select {
+  	background: transparent;
+  	border: 1px solid #a7a7a7;
+  	color: #a7a7a7;
+  	padding: 20px;
+  	border-radius: 0;
+}
+
+.contact-inquiry .contact-form > form select.subject {
+  	padding: 0 18px;
+  	height: 69px;
+}
+
+.contact-inquiry .contact-form > form input::placeholder,
+.contact-inquiry .contact-form > form textarea::placeholder,
+.contact-inquiry .contact-form > form select::placeholder {
+  	color: #a7a7a7;
+  	font-weight: 300;
+}
+
+.contact-inquiry .contact-form > form input:focus,
+.contact-inquiry .contact-form > form textarea:focus,
+.contact-inquiry .contact-form > form select:focus {
+  	outline: none;
+  	box-shadow: none;
+}
+
+.contact-inquiry .contact-form > form button {
+  	background: transparent;
+  	border: 1px solid #a7a7a7;
+  	color: #03846E;
+  	padding: 20px;
+  	border-radius: 0;
+  	width: 100%;
+  	margin-top: 30px;
+}
+
+.contact-inquiry .contact-form > form button:hover {
+	color: #FFF;
+  	border: 1px solid #03846E;
+  	background: #03846E;
+  	transition: all .3s ease-in-out;
+}
+
+.contact-inquiry .contact-form > form textarea {
+	width: 100%;
+	height: 100px;
+}
+
+.contact-inquiry .contact-location {
+	height: 600px;
+	overflow: hidden;
+}
+
+.contact-inquiry .contact-location > iframe {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+/*	filter: invert(100%);*/
+}
+
+/*****************************************************************************************/
+/******************************* Start Media Screens Styling ****************************/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.contact .contact-intro > h1,
+	.contact .contact-intro > p {
+		width: 100%;
+	}
+
+	.contact-inquiry .inquiry-intro > h1 {
+		width: 105%;
+	}
+}
+
+/****************************************************************************************/
+
+@media screen and (max-width: 768px) {
+	.contact .contact-intro > h1,
+	.contact .contact-intro > p {
+		width: 100%;
+	}
+
+	.contact-inquiry .inquiry-intro > h1 {
+		width: 105%;
+	}
+}
+
+/****************************************************************************************/
+
+@media screen and (max-width: 576px) {
+	.contact .contact-intro > h1,
+	.contact .contact-intro > p {
+		width: 100%;
+	}
+
+	.contact-inquiry .inquiry-intro > h1 {
+		width: 105%;
+	}
+}

@@ -1,0 +1,139 @@
+.careers {
+	padding: 10px;
+	margin-top: 50px;
+}
+
+.careers .careers-heading > h3 {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 19.01px;
+	color: #ffb301;
+	text-transform: capitalize;
+}
+
+.careers .careers-heading > h1 {
+	font-size: 77px;
+	font-weight: 500;
+	line-height: 91.48px;
+	letter-spacing: -2px;
+	color: #222323;
+	max-width: 806px;
+	margin-top: 20px;
+	text-transform: capitalize;
+}
+
+.careers .careers-heading > p {
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 23.76px;
+	color: #a7a7a7;
+	letter-spacing: 1px;
+}
+
+.careers .careers-form {
+	margin-top: 100px;
+}
+
+.careers .careers-form > h2 {
+	font-size: 55px;
+	font-weight: 500;
+	letter-spacing: -2px;
+	text-align: center;
+	line-height: 65.34px;
+	text-transform: capitalize;
+}
+
+.careers .careers-form > h2 > span {
+	color: #03846E;
+}
+
+.careers .careers-form > p {
+	margin-top: 30px;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 23.76px;
+	color: #888888;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+.careers .careers-form-form > form {
+	font-size: 20px;
+	font-weight: 400;
+	color: #031602;
+	line-height: 23.76px;
+}
+
+.careers .careers-form-form > form input {
+	height: 70px;
+	width: 100%;
+	display: block;
+}
+
+.careers .careers-form-form > form {
+  	padding: 40px;
+  	padding-top: 10px;
+  	border-bottom-left-radius: 30px;
+  	border-bottom-right-radius: 30px;
+  	margin-top: 30px;
+}
+
+.careers .careers-form-form > form label {
+  	color: #031602;
+  	font-size: 20px;
+  	font-weight: 400;
+  	line-height: 23.76px;
+  	text-transform: capitalize;
+}
+
+.careers .careers-form-form > form input,
+.careers .careers-form-form > form textarea,
+.careers .careers-form-form > form select {
+  	background: transparent;
+  	border: 1px solid #a7a7a7;
+  	color: #a7a7a7;
+  	padding: 20px;
+  	border-radius: 0;
+}
+
+.careers .careers-form-form > form select.subject {
+  	padding: 0 18px;
+  	height: 69px;
+}
+
+.careers .careers-form-form > form input::placeholder,
+.careers .careers-form-form > form textarea::placeholder,
+.careers .careers-form-form > form select::placeholder {
+  	color: #a7a7a7;
+}
+
+.careers .careers-form-form > form input:focus,
+.careers .careers-form-form > form textarea:focus,
+.careers .careers-form-form > form select:focus {
+  	outline: none;
+  	box-shadow: none;
+}
+
+.careers .careers-form-form > form button {
+  	background: transparent;
+  	border: 1px solid #a7a7a7;
+  	color: #03846E;
+  	padding: 20px;
+  	border-radius: 0;
+  	width: 100%;
+  	margin-top: 30px;
+}
+
+.careers .careers-form-form > form button:hover {
+	color: #FFF;
+  	border: 1px solid #03846E;
+  	background: #03846E;
+  	transition: all .3s ease-in-out;
+}
+
+.careers .careers-form-form > form textarea {
+	width: 100%;
+	height: 170px;
+}
