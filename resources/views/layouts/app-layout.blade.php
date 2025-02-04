@@ -71,7 +71,7 @@
     <header>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{route('home')}}">
                 <img src="{{asset('storage/images/logos/prosper_logo.png')}}" alt="Prosoper Egypt Holding">
                 <div class="logo-title">
                     <p>Prosper Egypt</p>

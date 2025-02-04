@@ -21,7 +21,8 @@
                         <div class="contact-info">
                             <h3>+20-01128776670</h3>
                         </div>
-                        <div class="contact-info-overlay" style="background-image: url({{asset('storage/images/logos/Smartphone1.png')}});">
+                        <div class="contact-info-overlay"
+                            style="background-image: url({{ asset('storage/images/logos/Smartphone1.png') }});">
                             <h3>+20-01128776670</h3>
                         </div>
                     </div>
@@ -31,7 +32,8 @@
                         <div class="contact-info">
                             <h3 class="contact-address">24 A Al-Obour Buildings 1st floor Salah Salem Cairo, Egypt</h3>
                         </div>
-                        <div class="contact-info-overlay" style="background-image: url({{asset('storage/images/logos/Global.png')}});">
+                        <div class="contact-info-overlay"
+                            style="background-image: url({{ asset('storage/images/logos/Global.png') }});">
                             <h3 class="contact-address">24 A Al-Obour Buildings 1st floor Salah Salem Cairo, Egypt</h3>
                         </div>
                     </div>
@@ -42,7 +44,7 @@
                             <h3>Info@Prosoperegypt.Com</h3>
                         </div>
                         <div class="contact-info-overlay"
-                            style="background-image: url({{asset('storage/images/logos/Typing-at-Laptop1.png')}});">
+                            style="background-image: url({{ asset('storage/images/logos/Typing-at-Laptop1.png') }});">
                             <h3>Info@Prosoperegypt.Com</h3>
                         </div>
                     </div>
@@ -64,17 +66,48 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12" id="contact-form">
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert"
+                            style="position: relative; z-index: 9999999999">
+                            <strong>{{ session('success') }}</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
                     <div class="contact-form">
-                        <form action="" method="" enctype="">
+                        <form action="{{ route('contact.submit') }}" method="POST" enctype="">
+                            @csrf
                             <div class="form-group">
                                 <label>Name</label>
                                 <div class="row">
                                     <div class="col">
-                                        <input type="text" class="form-control" placeholder="First name">
+                                        <input type="text" class="form-control" placeholder="First name"
+                                            name="first-name" value="{{ old('first-name') }}">
+                                        @error('first-name')
+                                            <p class="text-danger m-0 p-0">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                     <div class="col">
-                                        <input type="text" class="form-control" placeholder="Last name">
+                                        <input type="text" class="form-control" placeholder="Last name" name="last-name"
+                                            value="{{ old('last-name') }}">
+                                        @error('last-name')
+                                            <p class="text-danger m-0 p-0">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>email</label>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="email" placeholder="email@example.com" name="email"
+                                            value="{{ old('email') }}">
+                                        @error('email')
+                                            <p class="text-danger m-0 p-0">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +116,11 @@
                                 <label>phone number</label>
                                 <div class="row">
                                     <div class="col">
-                                        <input type="text" placeholder="+01212087255">
+                                        <input type="text" placeholder="+01212087255" name="phone"
+                                            value="{{ old('phone') }}">
+                                        @error('phone')
+                                            <p class="text-danger m-0 p-0">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
@@ -92,12 +129,11 @@
                                 <label>Subject</label>
                                 <div class="row">
                                     <div class="col">
-                                        <select class="form-control subject">
-                                            <option>Choose Your Country</option>
-                                            <option>Subject1</option>
-                                            <option>Subject2</option>
-                                            <option>Subject3</option>
-                                        </select>
+                                        <input type="text" placeholder="Subject" name="subject"
+                                            value="{{ old('subject') }}">
+                                        @error('subject')
+                                            <p class="text-danger m-0 p-0">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +142,10 @@
                                 <label>Message</label>
                                 <div class="row">
                                     <div class="col">
-                                        <textarea placeholder="Your Message"></textarea>
+                                        <textarea placeholder="Your Message" name="message">{{ old('message') }}</textarea>
+                                        @error('message')
+                                            <p class="text-danger m-0 p-0">{{ $message }}</p>
+                                        @enderror
                                     </div>
                                 </div>
                             </div>

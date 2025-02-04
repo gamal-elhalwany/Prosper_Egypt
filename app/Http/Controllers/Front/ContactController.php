@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Exception;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -18,9 +21,20 @@ class ContactController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function submit(Request $request)
     {
-        //
+        $request->validate([
+            'first-name' => 'required|string|max:255',
+            'last-name' => 'required|string|max:255',
+            'email'     => 'required|email',
+            'phone'     => 'required|numeric|digits:11',
+            'subject'   => 'required|string|max:255',
+            'message'   => 'required|string|max:5000',
+        ]);
+
+        Mail::to('Info@Prosperegypt.com')->send(new ContactMail($request->all()));
+
+        return redirect()->to(url()->previous() . '#contact-form')->with('success', 'Your message has been sent successfully!');
     }
 
     /**
