@@ -87,6 +87,8 @@ class CareersController extends Controller
 
         Mail::to('elprince054@gmail.com')->send(new CareersMail($request->all(),  $fromEmail, $fromName, storage_path('app/public/' . $filePath)));
 
+        Storage::delete('public/' . $filePath);
+
         return redirect()->to(url()->previous() . '#careers-form')->with('success', 'Your application has been sent successfully!');
     }
 
