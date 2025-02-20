@@ -8,22 +8,26 @@ use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Mail\Mailables\Attachment;
 
-class ContactMail extends Mailable
+class CareersMail extends Mailable
 {
     use Queueable, SerializesModels;
-    public $content;
 
+    public $content;
     public $fromEmail;
     public $fromName;
+    public $resumePath;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($content, $fromEmail, $fromName)
+    public function __construct($content, $fromEmail, $fromName, $resumePath = null)
     {
         $this->content = $content;
+        $this->resumePath = $resumePath;
+
         $this->fromEmail = $fromEmail;
         $this->fromName = $fromName;
     }
@@ -34,7 +38,7 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->content['subject'],
+            subject: "Careers Application",
             from: new Address($this->content['email']),
         );
     }
@@ -45,17 +49,24 @@ class ContactMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.contact-form',
+            view: 'emails.careers-form',
+            with: ['content' => $this->content],
         );
     }
 
     /**
      * Get the attachments for the message.
      *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
+     * @return array<int, Attachment>
      */
     public function attachments(): array
     {
-        return [];
+        $attachments = [];
+
+        if ($this->resumePath) {
+            $attachments[] = Attachment::fromPath($this->resumePath);
+        }
+
+        return $attachments;
     }
 }

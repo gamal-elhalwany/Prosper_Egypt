@@ -21,7 +21,10 @@ use App\Http\Controllers\Front\BusinessController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about-us', [AboutController::class, 'index'])->name('about-us');
 Route::get('/lines-of-business', [BusinessController::class, 'index'])->name('business');
+
+// Careers Form Routes.
 Route::get('/careers', [CareersController::class, 'index'])->name('careers');
+Route::post('/careers/contact', [CareersController::class, 'store'])->name('careers.apply');
 
 
 // Contact Forms Routes.

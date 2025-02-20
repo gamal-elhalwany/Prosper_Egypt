@@ -79,6 +79,7 @@
                     <div class="contact-form">
                         <form action="{{ route('contact.submit') }}" method="POST" enctype="">
                             @csrf
+                            <input type="hidden" name="form_type" value="contact-form">
                             <div class="form-group">
                                 <label>Name</label>
                                 <div class="row">
@@ -170,3 +171,20 @@
     <!-- Inquiry Section -->
 
 @endsection
+
+@if($errors->any())
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const formSection = document.getElementById('contact-form');
+        if (formSection) {
+            formSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+            // Temporary URL update without page reload
+            history.replaceState(null, null, '#contact-form');
+        }
+    });
+</script>
+@endif

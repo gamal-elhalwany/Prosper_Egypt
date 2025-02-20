@@ -370,6 +370,7 @@
                         @endif
                         <form class="" action="{{ route('contact.submit') }}" method="POST">
                             @csrf
+                            <input type="hidden" name="form_type" value="contact-form">
                             <div class="group">
                                 <label>Name</label>
                                 <div class="row">
@@ -395,7 +396,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <input type="email" class="form-control" name="email"
-                                            placeholder="email@example.com" value="{{ old('email') }}">
+                                            placeholder="example@gmail.com" value="{{ old('email') }}">
                                         @error('email')
                                             <p class="text-danger m-0 p-0">{{ $message }}</p>
                                         @enderror

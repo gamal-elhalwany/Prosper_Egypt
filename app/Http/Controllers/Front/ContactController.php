@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Front;
 
+use Exception;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Exception;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Config;
+use Symfony\Component\Console\Input\Input;
 
 class ContactController extends Controller
 {
@@ -32,9 +34,15 @@ class ContactController extends Controller
             'message'   => 'required|string|max:5000',
         ]);
 
-        Mail::to('Info@Prosperegypt.com')->send(new ContactMail($request->all()));
+        Config::set('mail.mailers.smtp.username', env('MAIL_USERNAME'));
+        Config::set('mail.mailers.smtp.password', env('MAIL_PASSWORD'));
 
-        return redirect()->to(url()->previous() . '#contact-form')->with('success', 'Your message has been sent successfully!');
+        $fromEmail = env('MAIL_FROM_ADDRESS');
+        $fromName = env('MAIL_FROM_NAME');
+
+        Mail::to('gamalelhalwany3@gmail.com')->send(new ContactMail($request->all(), $fromEmail, $fromName));
+
+        return redirect()->to(url()->previous() . '#careers-form')->with('success', 'Your application has been sent successfully!');
     }
 
     /**
