@@ -15,7 +15,6 @@ header .navbar {
   width: 100%;
   z-index: 10;
   background: #fff;
-  box-shadow: 15px 0px 25px rgba(0, 0, 0, 0.5);
   transition: all 1s ease-in-out;
 }
 
@@ -507,6 +506,135 @@ header > .navbar .navbar-brand .logo-title > p:last-child {
   background-position: center center;
   border-radius: 50%;
 }
+
+.certificates .certification-paragraph {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.certificates .certification-paragraph p { 
+  width: 91%;
+  font-weight: 300;
+  font-size: 20px;
+  color: #a7a7a7;
+  line-height: 23.76px;
+  text-align: center;
+  margin: auto;
+  text-transform: capitalize;
+}
+
+/*****************************************************************************************/
+/***************************** Start Certificates Section Styling ***********************/
+.team {
+  padding: 10px;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  transition: all .2s ease-in-out;
+}
+
+.team .our-team {
+  text-align: center;
+}
+
+.team .team-caption h1 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 65.34px;;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.team .team-caption h1:first-of-type {
+  color: #03846e;
+}
+
+.team .member-container {
+  position: relative;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+
+.team .team-member {
+  height: 750px;
+  background-size: cover;
+  background-position: center center;
+  margin-top: 100px;
+  transition: all .2s ease-in-out;
+}
+
+.team .member-container .member-info {
+  background: transparent;
+  position: absolute;
+  top: 83%;
+  padding-left: 20px;
+  z-index: 999999;
+  transition: all .2s ease-in-out;
+}
+
+.team .member-container .member-info h1 {
+  font-family: 'Creato Display';
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 65.34px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.team .member-container .member-info h6 {
+  font-family: 'Creato Display';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.76px;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.team .member-container .member-info p {
+  font-family: 'Creato Display';
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 45px;
+  color: #FFF;
+  text-transform: capitalize;
+}
+
+.team .member-container .member-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team .member-container .member-info ul li {
+  display: inline-block;
+  margin: 15px;
+}
+
+.team .member-container:hover .member-info {
+  top: 54%;
+}
+
+.team .member-container:hover .team-member {
+  filter: blur(3px);
+}
+
+.team .member-container:hover {
+  width: 102%;
+  margin: auto;
+}
+
+.team .member-container:hover .member-info h1 {
+  font-family: serif;
+}
+
+.team .member-container .member-info ul li a img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+}
+
 
 /*****************************************************************************************/
 /*********************************** Start Media Screen Styling *************************/

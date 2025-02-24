@@ -70,7 +70,7 @@
     <!-- Start Header -->
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light" style="{{ !request()->is('/') ? 'box-shadow: 15px 0px 25px rgba(0, 0, 0, 0.5);' : '' }}">
             <a class="navbar-brand" href="{{route('home')}}">
                 <img src="{{asset('storage/images/logos/prosper_logo.png')}}" alt="Prosoper Egypt Holding">
                 <div class="logo-title">
@@ -159,12 +159,12 @@
                     <ul class="social-list">
                         <h3>Social</h3>
                         <li>
-                            <a class="white-one" href="#">f</a>
-                            <a class="colored-one" href="#">f</a>
+                            <a class="white-one" href="https://www.facebook.com/Prosoperegypt">f</a>
+                            <a class="colored-one" href="https://www.facebook.com/Prosoperegypt">f</a>
                         </li>
                         <li>
-                            <a class="white-one" href="#">in</a>
-                            <a class="colored-one" href="#">in</a>
+                            <a class="white-one" href="https://www.linkedin.com/company/prosper-egypt">in</a>
+                            <a class="colored-one" href="https://www.linkedin.com/company/prosper-egypt">in</a>
                         </li>
                     </ul>
                 </div>

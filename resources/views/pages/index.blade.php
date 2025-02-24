@@ -9,11 +9,11 @@
                 <div class="slider-content">
                     <div class="slider">
                         <video class="slider-item" src="{{ asset('storage/images/videos/Prosper_v1.mp4') }}" muted></video>
-                        <div class="separator"></div>
+                        {{-- <div class="separator"></div> --}}
                         <video class="slider-item" src="{{ asset('storage/images/videos/Prosper_v2.mp4') }}" muted></video>
-                        <div class="separator"></div>
+                        {{-- <div class="separator"></div> --}}
                         <video class="slider-item" src="{{ asset('storage/images/videos/Prosper_v3.mov') }}" muted></video>
-                        <div class="separator"></div>
+                        {{-- <div class="separator"></div> --}}
                         <video class="slider-item" src="{{ asset('storage/images/videos/Prosper_v4.mp4') }}" muted></video>
                     </div>
                     <div class="slider-overlay">
@@ -27,10 +27,10 @@
                                             <span class="yellow">Exellence</span>
                                             you can trust
                                         </h1>
-                                        <p>At prosper, we integrate top-tier security solutions and innovative software
-                                            development to deliver comprehensive facility management services. Our
-                                            commitment to
-                                            excellence ensures your operations run smoothly, securely, and efficiently
+                                        <p>At Prosper, we focus on facility management services, seamlessly integrating
+                                            construction, fit-out, and MEP solutions with top-tier security and innovative
+                                            software development. Our unwavering commitment to excellence guarantees that
+                                            your operations are managed smoothly, securely, and efficiently.
                                         </p>
                                     </div>
                                     <ul class="slider-list">
@@ -59,21 +59,39 @@
     <section class="mini-slider">
         <div class="container-fluid">
             <div class="small-slider">
-                <img src="{{ asset('storage/images/mini-slider/mini-slider1.png') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/mini-slider2.png') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/mini-slider3.png') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/mini-slider4.png') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/mini-slider5.png') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/mini-slider6.png') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/mini-slider7.png') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/mini-slider8.png') }}" alt=4Image 1">
-                {{-- <img src="images/mini-slider/mini-slider2.png" alt="Image 2">
-            <img src="images/mini-slider/mini-slider3.png" alt="Image 3">
-            <img src="images/mini-slider/mini-slider4.png" alt="Image 4">
-            <img src="images/mini-slider/mini-slider5.png" alt="Image 5">
-            <img src="images/mini-slider/mini-slider6.png" alt="Image 6">
-            <img src="images/mini-slider/mini-slider7.png" alt="Image 7">
-            <img src="images/mini-slider/mini-slider8.png" alt="Image 8"> --}}
+                <img src="{{ asset('storage/images/mini-slider/banner1.jpeg') }}" alt="Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner2.jpeg') }}" alt="Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner3.jpeg') }}" alt="Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner4.jpeg') }}" alt="Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner5.jpeg') }}" alt="Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner6.jpeg') }}" alt="Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner7.jpeg') }}" alt="Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner8.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner9.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner10.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner11.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner12.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner13.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner14.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner15.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner16.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner17.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner18.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner19.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner20.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner21.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner22.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner23.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner24.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner25.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner26.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner27.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner28.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner29.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner30.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner31.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner32.jpeg') }}" alt="4Image 1">
+                <img src="{{ asset('storage/images/mini-slider/banner33.jpeg') }}" alt="4Image 1">
             </div>
         </div>
     </section>
@@ -345,12 +363,12 @@
                             customer services.</p>
                         <ul>
                             <li>
-                                <a class="white-one" href="#">f</a>
-                                <a class="colored-one" href="#">f</a>
+                                <a class="white-one" href="https://www.facebook.com/Prosperegypt">f</a>
+                                <a class="colored-one" href="https://www.facebook.com/Prosperegypt">f</a>
                             </li>
                             <li>
-                                <a class="white-one" href="#">in</a>
-                                <a class="colored-one" href="#">in</a>
+                                <a class="white-one" href="https://www.linkedin.com/company/prosper-egypt">in</a>
+                                <a class="colored-one" href="https://www.linkedin.com/company/prosper-egypt">in</a>
                             </li>
                         </ul>
                     </div>
@@ -361,7 +379,8 @@
                         <h3>Contact</h3>
                         <h1>Have Any Inquiry ? Contact Us !</h1>
                         @if (session('success'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert" style="position: relative; z-index: 9999999999">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert"
+                                style="position: relative; z-index: 9999999999">
                                 <strong>{{ session('success') }}</strong>
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>

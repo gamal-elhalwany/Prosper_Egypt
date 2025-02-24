@@ -230,8 +230,96 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="certification-paragraph">
+                    <p>
+                        Quality is not just a buzzword at Prosper Egypt Facility Management; it’s a promise. We are proud holders of three ISO certifications: ISO 9001, 14001, and 45001. These certifications are a testament to our commitment to providing the best services and products in the industry, we have been applied the ISO 9001 , ISO 14001, ISO 45001 in Facility Management to acknowledge Prosper Egypt as the ” Best Facility Management Company in Egypt “
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Certificates Section -->
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="team-caption">
+                        <h1>Meet Our Team</h1>
+                        <h1>The Minds Behind The Magic</h1>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="member-container">
+                        <div class="team-member" style="background-image: url({{asset('storage/images/team/team-1.jpg')}});">
+    
+                        </div>
+                        <div class="member-info">
+                            <h1>Zara Payne</h1>
+                            <h6>Robotics Engineer</h6>
+                            <p>As An Archaeologist, I Am Passionate About Uncovring The Past,Conducting Fieldwork And Research To Explore Ancient Civilizations And Cultures.</p>
+                            <ul>
+                                <li>
+                                    <a href=""><img src="{{asset('storage/images/logos/linkedin-logo.png')}}"></a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="{{asset('storage/images/logos/github-mark.png')}}">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="member-container">
+                        <div class="team-member" style="background-image: url({{asset('storage/images/team/team-2.jpg')}});">
+    
+                        </div>
+                        <div class="member-info">
+                            <h1>Emily Smith</h1>
+                            <h6>UI/UX Designer</h6>
+                            <p>As An Archaeologist, I Am Passionate About Uncovring The Past,Conducting Fieldwork And Research To Explore Ancient Civilizations And Cultures.</p>
+                            <ul>
+                                <li>
+                                    <a href=""><img src="{{asset('storage/images/logos/linkedin-logo.png')}}"></a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="{{asset('storage/images/logos/github-mark.png')}}">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="member-container">
+                        <div class="team-member" style="background-image: url({{asset('storage/images/team/team-3.jpg')}});">
+    
+                        </div>
+                        <div class="member-info">
+                            <h1>George Walker</h1>
+                            <h6>Markting Mananger</h6>
+                            <p>As An Archaeologist, I Am Passionate About Uncovring The Past,Conducting Fieldwork And Research To Explore Ancient Civilizations And Cultures.</p>
+                            <ul>
+                                <li>
+                                    <a href=""><img src="{{asset('storage/images/logos/linkedin-logo.png')}}"></a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="{{asset('storage/images/logos/github-mark.png')}}">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section -->
 
 @endsection
