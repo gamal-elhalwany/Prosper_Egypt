@@ -22,7 +22,7 @@
                             <h1>15 <span>+</span></h1>
                             <p>Years of Experience</p>
                         </div>
-                        <div class="expertise-overlay" style="background-image: url({{asset('storage/images/logos/modern-urban.jpg')}});">
+                        <div class="expertise-overlay" style="background-image: url({{asset('storage/images/about-us/about-1.jpg')}});">
                             <div class="overlay-shadow"></div>
                             <h1>15 <span>+</span></h1>
                             <p>Years of Experience</p>
@@ -33,13 +33,13 @@
                 <div class="col-md-3 col-sm-12">
                     <div class="expertise-container">
                         <div class="expertise">
-                            <h1>6 <span>+</span></h1>
-                            <p>iso certificates</p>
+                            <h1>3 <span>+</span></h1>
+                            <p>ISO certificates</p>
                         </div>
-                        <div class="expertise-overlay" style="background-image: url({{asset('storage/images/logos/modern-urban2.jpg')}});">
+                        <div class="expertise-overlay" style="background-image: url({{asset('storage/images/about-us/about-2.jpg')}});">
                             <div class="overlay-shadow"></div>
-                            <h1>6 <span>+</span></h1>
-                            <p>iso certificates</p>
+                            <h1>3 <span>+</span></h1>
+                            <p>ISO certificates</p>
                         </div>
                     </div>
                 </div>
@@ -47,13 +47,13 @@
                 <div class="col-md-3 col-sm-12">
                     <div class="expertise-container">
                         <div class="expertise">
-                            <h1>250 <span>+</span></h1>
-                            <p>locations</p>
+                            <h1>26 <span>+</span></h1>
+                            <p>Hubs</p>
                         </div>
-                        <div class="expertise-overlay" style="background-image: url({{asset('storage/images/logos/modern-urban3.jpg')}});">
+                        <div class="expertise-overlay" style="background-image: url({{asset('storage/images/about-us/about-3.jpg')}});">
                             <div class="overlay-shadow"></div>
-                            <h1>250 <span>+</span></h1>
-                            <p>locations</p>
+                            <h1>26 <span>+</span></h1>
+                            <p>Hubs</p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                             <h1>30 <span>+</span></h1>
                             <p>facility clients</p>
                         </div>
-                        <div class="expertise-overlay" style="background-image: url({{asset('storage/images/logos/modern-urban4.jpg')}});">
+                        <div class="expertise-overlay" style="background-image: url({{asset('storage/images/about-us/about-4.jpg')}});">
                             <div class="overlay-shadow"></div>
                             <h1>30 <span>+</span></h1>
                             <p>facility clients</p>
@@ -92,11 +92,13 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="description">
                         <h1><span>Our</span> Story</h1>
-                        <p>Based in Cairo, and covering all over Egypt; Prosper Egypt provides a full range of
-                            facilities management and property maintenance services. Our lines of services include
-                            Facilities Management, Commercial Cleaning, Repair & Maintenance either Preventive or
-                            Reactive, and more services. We extend to serve you in areas like Finishing & Furnishing,
-                            Landscaping, Procurement & More.</p>
+                        <p>Since our establishment in 2016, Prosper Egypt has been on a journey of continuous evolution and growth. What began as a total renovation company transformed in 2019 into a leading total facilities management company in Egypt, delivering integrated solutions tailored to the evolving needs of businesses.</p>
+
+                        <p>Today, in 2025, we have expanded into a diversified group of companies, each specializing in key sectors that drive business success:
+                            •	Prosper Egypt for Facilities Management – Delivering comprehensive facility management solutions that ensure operational excellence.
+                            •	Prosper Egypt for Security Services – Providing advanced security solutions to protect businesses, assets, and communities.
+                            •  Prosper Technology Solutions – Innovating application software and digital solutions to enhance business efficiency and transformation.
+                            •	Diligence General Supplies – Supplying high-quality products and services across various industries to meet business demands.</p>
                     </div>
                 </div>
             </div>
@@ -175,14 +177,12 @@
                     <div class="vision-container">
                         <div class="vision-child">
                             <h1>Our Vision</h1>
-                            <p>To optimize the organization' performance through unique facility management practices,
-                                impacting your people, place, process, and technology</p>
+                            <p>With a strong foundation in Egypt, we are now setting our sights on regional expansion. Our vision for 2025 and beyond is to extend our presence into the GCC and Middle East markets, offering our expertise and integrated solutions to new frontiers</p>
                         </div>
                         <div class="vision-overlay" style="background-image: url({{asset('storage/images/logos/vision-img.jpg')}});">
                             <div class="overlay-shadow"></div>
                             <h1>Our Vision</h1>
-                            <p>To optimize the organization' performance through unique facility management practices,
-                                impacting your people, place, process, and technology</p>
+                            <p>With a strong foundation in Egypt, we are now setting our sights on regional expansion. Our vision for 2025 and beyond is to extend our presence into the GCC and Middle East markets, offering our expertise and integrated solutions to new frontiers</p>
                         </div>
                     </div>
                 </div>

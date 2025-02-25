@@ -101,7 +101,7 @@ header > .navbar .navbar-brand .logo-title > p:last-child {
   font-size: 77px;
   line-height: 91.48px;
   letter-spacing: -2px;
-  width: 68%;
+  width: 75%;
   text-transform: capitalize;
 }
 
@@ -625,9 +625,9 @@ header > .navbar .navbar-brand .logo-title > p:last-child {
   margin: auto;
 }
 
-.team .member-container:hover .member-info h1 {
+/* .team .member-container:hover .member-info h1 {
   font-family: serif;
-}
+} */
 
 .team .member-container .member-info ul li a img {
   height: 50px;
