@@ -213,19 +213,19 @@
             <h1>Certificates of <span>Distinction</span></h1>
             <div class="row">
                 <div class="col-md-4 col-sm-12">
-                    <div class="certificate-img" style="background-image: url({{asset('storage/images/logos/iso-9001.png')}});">
+                    <div class="certificate-img" style="background-image: url({{asset('storage/images/logos/iso9001.png')}});">
 
                     </div>
                 </div>
 
                 <div class="col-md-4 col-sm-12">
-                    <div class="certificate-img" style="background-image: url({{asset('storage/images/logos/iso-14001.png')}});">
+                    <div class="certificate-img" style="background-image: url({{asset('storage/images/logos/iso14001.png')}});">
 
                     </div>
                 </div>
 
                 <div class="col-md-4 col-sm-12">
-                    <div class="certificate-img" style="background-image: url({{asset('storage/images/logos/iso-45001.png')}});">
+                    <div class="certificate-img" style="background-image: url({{asset('storage/images/logos/iso45001.png')}});">
 
                     </div>
                 </div>
@@ -233,7 +233,7 @@
             <div class="row">
                 <div class="certification-paragraph">
                     <p>
-                        Quality is not just a buzzword at Prosper Egypt Facility Management; it’s a promise. We are proud holders of three ISO certifications: ISO 9001, 14001, and 45001. These certifications are a testament to our commitment to providing the best services and products in the industry, we have been applied the ISO 9001 , ISO 14001, ISO 45001 in Facility Management to acknowledge Prosper Egypt as the ” Best Facility Management Company in Egypt “
+                        Quality is not just a buzzword at Prosper Egypt Facility Management; it's a promise. We are proud holders of three ISO certifications: ISO 9001, 14001, and 45001. These certifications are a testament to our commitment to providing the best services and products in the industry, we have been applied the ISO 9001 , ISO 14001, ISO 45001 in Facility Management to acknowledge Prosper Egypt as the ” Best Facility Management Company in Egypt “
                     </p>
                 </div>
             </div>
