@@ -1,31 +1,103 @@
 <x-app-layout>
+    @push('style')
+        <link rel="stylesheet" href="{{asset('assets/css/dashboard/main.css')}}">
+    @endpush
     {{-- <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
         </h2>
     </x-slot> --}}
 
-    <div class="py-12">
+    <div class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    Partners Banner
+                <div class="p-6 bg-gradient-to-r from-blue-500 to-indigo-600">
+                    <h2 class="text-2xl font-bold text-gray">Partners Banner</h2>
                 </div>
 
-                <form action="" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    @if (isset($partner))
-                    @method('PUT')
+                <div class="store-form p-4 bg-white rounded shadow-sm mb-5">
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert"
+                            style="width:80%; background: none; border: none;">
+                            <strong>{{ session('success') }}</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
                     @endif
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col">
-                                <label for="partner">Upload Partner Logo:</label>
-                                <input type="file" name="partner_logo" />
+
+                    <form
+                        action="{{ isset($partner) ? route('banner.logo.update', $partner->id) : route('banner.logo.store') }}"
+                        method="POST" enctype="multipart/form-data" class="p-6">
+                        @csrf
+                        @if (isset($partner))
+                            @method('PUT')
+                        @endif
+
+                        <div class="space-y-6">
+                            <div class="form-group">
+                                <div class="space-y-4">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="partner"
+                                                class="block text-sm font-medium text-gray-700">Partner
+                                                Name:</label>
+                                            <input type="text"
+                                                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                                name="name" placeholder="Partner name">
+                                            @error('name')
+                                                <p class="text-danger">{{ $message }}</p>
+                                            @enderror
+                                        </div>
+                                        <div class="col">
+                                            <label for="partner" class="block text-sm font-medium text-gray-700">Upload
+                                                Partner
+                                                Logo:</label>
+                                            <div class="mt-1 flex items-center">
+                                                <input type="file" name="logo"
+                                                    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                                                @error('logo')
+                                                    <p class="text-danger">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                            <p class="mt-2 text-sm text-gray-500">Please upload a high-quality logo in
+                                                PNG
+                                                or
+                                                JPG format.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end">
+                                <button type="submit"
+                                    class="btn btn-outline-primary d-inline-flex align-items-center px-4 py-2 rounded-md fw-semibold">
+                                    Add Partner
+                                </button>
                             </div>
                         </div>
+                    </form>
+                </div>
+                
+                <div class="delete-form p-4 bg-white rounded shadow-sm mt-5">
+                    <strong class="mb-5">Delete Partner Logo.</strong>
+                    <div class="container">
+                        <div class="row">
+                            @foreach ($partners as $partner)
+                            <div class="col-md-2 m-2">
+                                <form action="{{route('partner.delete', $partner->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <div class="partners-logos">
+                                        <img src="{{asset('storage/'.$partner->logo)}}" alt=""/>
+                                        <button type="submit" class="delete-partner">X</button>
+                                    </div>
+                                </form>
+                            </div>
+                            @endforeach
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

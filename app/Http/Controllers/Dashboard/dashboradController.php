@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Http\Controllers\Controller;
+use App\Models\Partner;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class dashboradController extends Controller
 {
@@ -14,7 +16,8 @@ class dashboradController extends Controller
     {
         $user = auth()->user();
         if ($user) {
-            return view('dashboard/dashboard');
+            $partners = Partner::all();
+            return view('dashboard/dashboard', compact('partners'));
         }
         return redirect()->route('login');
     }
@@ -30,9 +33,25 @@ class dashboradController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function storeBanner(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'name' => 'required|string|min:3|max:50',
+            'logo' => 'required|image:jpeg,jpg,png',
+        ]);
+
+        $user = auth()->user();
+        if ($user) {
+            $file = $request->file('logo');
+            $path = $file->store('images/banner', 'public');
+
+            Partner::create([
+                'name' => $request->input('name'),
+                'logo' => $path,
+            ]);
+            return redirect()->back()->with('success', 'The Logo been added successfully.');
+        }
+        return redirect()->route('login');
     }
 
     /**
@@ -54,7 +73,7 @@ class dashboradController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function updateBanner(Request $request, string $id)
     {
         //
     }
@@ -64,6 +83,18 @@ class dashboradController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = auth()->user();
+        if ($user) {
+            $partner = Partner::findOrFail($id);
+
+            $filePath = public_path('storage/' . $partner->logo);
+
+            if (file_exists($filePath)) {
+                unlink($filePath);
+            }
+            $partner->delete();
+            return redirect()->back()->with('success', 'Partner Logo Deleted Successfully.');
+        }
+        return redirect()->route('login');
     }
 }

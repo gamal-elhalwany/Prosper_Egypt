@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Dashboard\dashboradController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\HomeController;
@@ -41,6 +42,10 @@ Route::post('/contact', [ContactController::class, 'submit'])->name('contact.sub
 // Dashboard Routes.
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [dashboradController::class, 'index'])->name('dashboard');
+    Route::post('/dashboard/banner', [dashboradController::class, 'storeBanner'])->name('banner.logo.store');
+    Route::put('/dashboard/banner/{id}', [dashboradController::class, 'updateBanner'])->name('banner.logo.update');
+    Route::delete('/dashboard/delete/{id}', [dashboradController::class, 'destroy'])->name('partner.delete');
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
