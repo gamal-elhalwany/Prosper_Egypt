@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Prosper_Egypt'),
+    'name' => env('APP_NAME', 'Prosper Holding'),
     'developer' => env('APP_DEVELOPER', 'Gamal El_halwany'),
 
     /*

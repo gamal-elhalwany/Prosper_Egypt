@@ -53,7 +53,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('storage/images/logos/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('storage/images/logos/site.webmanifest') }}">    
 
-    <title>@yield('title', 'Prosper Egypt')</title> <!-- Page title -->
+    <title>@yield('title', 'Prosper Holding')</title> <!-- Page title -->
 
     <!-- Bootstrap CSS file -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">

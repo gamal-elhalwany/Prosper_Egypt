@@ -59,39 +59,9 @@
     <section class="mini-slider">
         <div class="container-fluid">
             <div class="small-slider">
-                <img src="{{ asset('storage/images/mini-slider/banner1.jpeg') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner2.jpeg') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner3.jpeg') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner4.jpeg') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner5.jpeg') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner6.jpeg') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner7.jpeg') }}" alt="Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner8.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner9.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner10.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner11.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner12.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner13.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner14.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner15.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner16.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner17.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner18.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner19.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner20.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner21.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner22.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner23.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner24.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner25.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner26.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner27.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner28.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner29.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner30.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner31.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner32.jpeg') }}" alt="4Image 1">
-                <img src="{{ asset('storage/images/mini-slider/banner33.jpeg') }}" alt="4Image 1">
+                @foreach ($partners as $partner)
+                    <img src="{{asset('storage/'. $partner->logo)}}" alt="">
+                @endforeach
             </div>
         </div>
     </section>
