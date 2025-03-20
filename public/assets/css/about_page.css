@@ -291,6 +291,16 @@ header > .navbar .navbar-brand .logo-title > p:last-child {
   text-transform: capitalize;
 }
 
+.our-story .description .last-p-list li {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23.76px;
+  letter-spacing: 1px;
+  color: #a7a7a7;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
 /*******************************************************************************************/
 /********************************* Start Why Prosper Section Stying ***********************/
 

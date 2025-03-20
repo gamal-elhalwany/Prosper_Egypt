@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Group;
 use Illuminate\Http\Request;
 
 class BusinessController extends Controller
@@ -12,7 +13,8 @@ class BusinessController extends Controller
      */
     public function index()
     {
-        return view('pages.lines-of-business');
+        $groups = Group::all();
+        return view('pages.lines-of-business', compact('groups'));
     }
 
     /**
