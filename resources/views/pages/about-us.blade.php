@@ -19,12 +19,12 @@
                 <div class="col-md-3 col-sm-12">
                     <div class="expertise-container">
                         <div class="expertise">
-                            <h1>15 <span>+</span></h1>
+                            <h1>9 <span>+</span></h1>
                             <p>Years of Experience</p>
                         </div>
                         <div class="expertise-overlay" style="background-image: url({{asset('storage/images/about-us/about-1.jpg')}});">
                             <div class="overlay-shadow"></div>
-                            <h1>15 <span>+</span></h1>
+                            <h1>9 <span>+</span></h1>
                             <p>Years of Experience</p>
                         </div>
                     </div>
@@ -33,12 +33,12 @@
                 <div class="col-md-3 col-sm-12">
                     <div class="expertise-container">
                         <div class="expertise">
-                            <h1>3 <span>+</span></h1>
+                            <h1>6 <span>+</span></h1>
                             <p>ISO certificates</p>
                         </div>
                         <div class="expertise-overlay" style="background-image: url({{asset('storage/images/about-us/about-2.jpg')}});">
                             <div class="overlay-shadow"></div>
-                            <h1>3 <span>+</span></h1>
+                            <h1>6 <span>+</span></h1>
                             <p>ISO certificates</p>
                         </div>
                     </div>
@@ -47,12 +47,12 @@
                 <div class="col-md-3 col-sm-12">
                     <div class="expertise-container">
                         <div class="expertise">
-                            <h1>26 <span>+</span></h1>
+                            <h1>4 <span>+</span></h1>
                             <p>Hubs</p>
                         </div>
                         <div class="expertise-overlay" style="background-image: url({{asset('storage/images/about-us/about-3.jpg')}});">
                             <div class="overlay-shadow"></div>
-                            <h1>26 <span>+</span></h1>
+                            <h1>4 <span>+</span></h1>
                             <p>Hubs</p>
                         </div>
                     </div>
@@ -95,10 +95,18 @@
                         <p>Since our establishment in 2016, Prosper Egypt has been on a journey of continuous evolution and growth. What began as a total renovation company transformed in 2019 into a leading total facilities management company in Egypt, delivering integrated solutions tailored to the evolving needs of businesses.</p>
 
                         <p>Today, in 2025, we have expanded into a diversified group of companies, each specializing in key sectors that drive business success:
-                            •	Prosper Egypt for Facilities Management – Delivering comprehensive facility management solutions that ensure operational excellence.
-                            •	Prosper Egypt for Security Services – Providing advanced security solutions to protect businesses, assets, and communities.
-                            •  Prosper Technology Solutions – Innovating application software and digital solutions to enhance business efficiency and transformation.
-                            •	Diligence General Supplies – Supplying high-quality products and services across various industries to meet business demands.</p>
+                            <ul class="last-p-list">
+                                <li>
+                                    Prosper Egypt for Facilities Management – Delivering comprehensive facility management solutions that ensure operational excellence.
+                                </li>
+                                <li>
+                                    Prosper Egypt for Security Services – Providing advanced security solutions to protect businesses, assets, and communities.
+                                </li>
+                                <li>
+                                    Prosper Technology Solutions – Innovating application software and digital solutions to enhance business efficiency and transformation.
+                                </li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -321,5 +329,5 @@
         </div>
     </section>
     <!-- Team Section -->
-
+9
 @endsection

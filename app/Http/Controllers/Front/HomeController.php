@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
+use App\Models\Group;
 use App\Models\Partner;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,8 @@ class HomeController extends Controller
     public function index()
     {
         $partners = Partner::all();
-        return view("pages.index", compact('partners'));
+        $groups = Group::all();
+        return view("pages.index", compact('partners', 'groups'));
     }
 
     /**

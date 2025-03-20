@@ -41,10 +41,14 @@ Route::post('/contact', [ContactController::class, 'submit'])->name('contact.sub
 
 // Dashboard Routes.
 Route::middleware('auth')->group(function () {
+    // Landing Page Partners Panner.
     Route::get('/dashboard', [dashboradController::class, 'index'])->name('dashboard');
     Route::post('/dashboard/banner', [dashboradController::class, 'storeBanner'])->name('banner.logo.store');
     Route::put('/dashboard/banner/{id}', [dashboradController::class, 'updateBanner'])->name('banner.logo.update');
     Route::delete('/dashboard/delete/{id}', [dashboradController::class, 'destroy'])->name('partner.delete');
+
+    // Lines of business routes.
+    Route::post('/dashboard/lines-of-business', [dashboradController::class, 'store_business'])->name('store.business');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -117,7 +117,9 @@
                         <h1>Contact Us !</h1>
                         <p>Call Us
                             <span>
-                                <a href="#">+01212087255</a>
+                                <a href="#">+01128776670</a>
+                                /
+                                <a href="#">+01000980165</a>
                             </span>
                         </p>
                         <p>Email Us

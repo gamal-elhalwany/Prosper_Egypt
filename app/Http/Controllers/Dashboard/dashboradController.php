@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Models\Partner;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Group;
 use Illuminate\Support\Facades\Storage;
 
 class dashboradController extends Controller
@@ -94,6 +95,35 @@ class dashboradController extends Controller
             }
             $partner->delete();
             return redirect()->back()->with('success', 'Partner Logo Deleted Successfully.');
+        }
+        return redirect()->route('login');
+    }
+
+
+    //***************************************************************************//
+    //**************** Start Lines of Business Coding (Group) *******************//
+
+    public function store_business(Request $request)
+    {
+        $request->validate([
+            'title' => 'required|string|min:10|max:255',
+            'description' => 'required|string',
+            'url' => 'nullable|string',
+            'group_logo' => 'required|image|mimes:png,jpg,webp',
+        ]);
+
+        $user = auth()->user();
+        if ($user) {
+            $file = $request->file('group_logo');
+            $path = $file->store('images/groups', 'public');
+            
+            Group::create([
+                'title' => $request->input('title'),
+                'description' => $request->input('description'),
+                'url' => $request->input('url'),
+                'group_logo' => $path,
+            ]);
+            return redirect()->back()->with('success', 'A new business add successfully');
         }
         return redirect()->route('login');
     }

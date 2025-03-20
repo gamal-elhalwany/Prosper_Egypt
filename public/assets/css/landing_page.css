@@ -251,9 +251,9 @@ body.home .navbar:hover .navbar-nav .nav-item:hover > a {
 .small-slider {
   display: flex;
   width: max-content;
-  animation: scroll 60s linear infinite alternate;
-  -webkit-animation: scroll 60s linear infinite alternate;
-  -moz-animation: scroll 60s linear infinite alternate;
+  animation: scroll 80s linear infinite alternate;
+  -webkit-animation: scroll 80s linear infinite alternate;
+  -moz-animation: scroll 80s linear infinite alternate;
 }
 
 .small-slider img {
@@ -823,7 +823,7 @@ footer .info > p {
 
 footer .info > p > span {
   position: absolute;
-  right: 0;
+  right: 230px;
 }
 
 footer .info > p > span > a {
