@@ -18,7 +18,8 @@ class dashboradController extends Controller
         $user = auth()->user();
         if ($user) {
             $partners = Partner::all();
-            return view('dashboard/dashboard', compact('partners'));
+            $groups = Group::all();
+            return view('dashboard/dashboard', compact('partners', 'groups'));
         }
         return redirect()->route('login');
     }
@@ -124,6 +125,16 @@ class dashboradController extends Controller
                 'group_logo' => $path,
             ]);
             return redirect()->back()->with('success', 'A new business add successfully');
+        }
+        return redirect()->route('login');
+    }
+
+    public function deleteGroup(Group $group) 
+    {
+        $user = auth()->user();
+        if ($user) {
+            $group->delete();
+            return redirect()->back()->with('success', 'The Group Deleted Successfully.');
         }
         return redirect()->route('login');
     }

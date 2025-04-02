@@ -122,7 +122,8 @@
                                             @enderror
                                         </div>
                                         <div class="col">
-                                            <label for="group_logo" class="block text-sm font-medium text-gray-700">Upload
+                                            <label for="group_logo"
+                                                class="block text-sm font-medium text-gray-700">Upload
                                                 Business Logo:
                                             </label>
                                             <div class="mt-1 flex items-center">
@@ -141,15 +142,17 @@
                                         <div class="col">
                                             <label>Add Business Description:</label>
                                             <div class="mt-1 flex items-center">
-                                                <textarea name="description" placeholder="add business description" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 h-50"></textarea>
+                                                <textarea name="description" placeholder="add business description"
+                                                    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 h-50"></textarea>
                                                 @error('description')
-                                                    <p class="text-danger">{{$message}}</p>    
+                                                    <p class="text-danger">{{ $message }}</p>
                                                 @enderror
                                             </div>
                                             <label class="mt-3">Add Business Url:</label>
-                                            <input type="text" name="url" placeholder="https://example.com" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            <input type="text" name="url" placeholder="https://example.com"
+                                                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                                             @error('url')
-                                                <p class="text-danger">{{$message}}</p>
+                                                <p class="text-danger">{{ $message }}</p>
                                             @enderror
                                         </div>
                                     </div>
@@ -164,6 +167,21 @@
                             </div>
                         </div>
                     </form>
+                </div>
+
+                <div class="delete-lines-of-business-form p-4 bg-white rounded shadow-sm mt-5">
+                    <div class="p-6 bg-gradient-to-r from-blue-500 to-indigo-600">
+                        <h2 class="text-gray" style="font-weight: bold;">Delete Line of Business (group).</h2>
+
+                        @foreach ($groups as $group)
+                            <form action="{{route('delete.business', $group->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <strong class="mr-5">{{$group->title}}</strong>
+                                <button type="submit" class="delete-group">X</button>
+                            </form>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>

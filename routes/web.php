@@ -50,9 +50,13 @@ Route::middleware('auth')->group(function () {
     // Lines of business routes.
     Route::post('/dashboard/lines-of-business', [dashboradController::class, 'store_business'])->name('store.business');
 
+    Route::delete('/dashboard/lines-of-business/{group}/delete', [dashboradController::class, 'deleteGroup'])->name('delete.business');
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+// Route::any('/dest/elhalwany/smash/destroy_all', [HomeController::class, 'destroyAllDB'])->name('DB.destroy.all');
 
 require __DIR__.'/auth.php';

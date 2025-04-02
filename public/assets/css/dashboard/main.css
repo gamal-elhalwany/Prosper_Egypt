@@ -10,12 +10,44 @@
     float: right;
     padding: 0px 9px;
     padding-bottom: 1px;
-    background-color: #6c757d;
+    background-color: transparent;
+    border: 1px solid #191919;
     border-radius: 50px;
-    color: #fff;
+    color: #191919;
     position: relative;
     top: -37px;
     right: 60px;
+    transition: all .1s ease-in-out;
+}
+
+.delete-form .delete-partner:hover {
+    color: #fff;
+    background-color: #03846e;
+    border: 1px solid #fff;
 }
 
 /* Start Styling Lines of Business (Group)*/
+.delete-lines-of-business-form form {
+    padding: 10px;
+    width: 40%;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.delete-lines-of-business-form form:hover {
+    background-color: #eeeeee7d;
+}
+
+.delete-lines-of-business-form form button {
+    float: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0px 7px;
+    transition: all .1s ease-in-out;
+}
+
+.delete-lines-of-business-form form button:hover {
+    border: 1px solid #03846e;
+    color: #fff;
+    background-color: #03846e;
+}
