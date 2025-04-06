@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Models\Group;
 use App\Models\Partner;
+use App\Models\service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -17,7 +18,8 @@ class HomeController extends Controller
     {
         $partners = Partner::all();
         $groups = Group::all();
-        return view("pages.index", compact('partners', 'groups'));
+        $services = Service::all();
+        return view("pages.index", compact('partners', 'groups', 'services'));
     }
 
     /**

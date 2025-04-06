@@ -12,13 +12,14 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-gradient-to-r from-blue-500 to-indigo-600">
-                    <h2 class="text-gray" style="font-weight: bold;">Add Partner Logo</h2>
+                    <h2 class="text-warning" style="font-weight: bold;">Add Partner Logo</h2>
                 </div>
 
+                <!-- Start Storing of partners banner section -->
                 <div class="store-form p-4 bg-white rounded shadow-sm mb-5">
                     @if (session('success'))
                         <div class="alert alert-success alert-dismissible fade show" role="alert"
-                            style="width:80%; background: none; border: none;">
+                            style="width:80%; background:#03846e; border:none; color:#f9f9f9;">
                             <strong>{{ session('success') }}</strong>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -78,9 +79,10 @@
                         </div>
                     </form>
                 </div>
+                <!-- End Storing of partners banner section -->
 
                 <div class="delete-form p-4 bg-white rounded shadow-sm mt-5">
-                    <strong class="mb-5">Delete Partner Logo.</strong>
+                    <strong class="text-warning mb-5">Delete Partner Logo.</strong>
                     <div class="container">
                         <div class="row">
                             @foreach ($partners as $partner)
@@ -99,9 +101,10 @@
                     </div>
                 </div>
 
+                <!-- Start Storing of lines of business section -->
                 <div class="store-lines-of-business-form p-4 bg-white rounded shadow-sm mt-5">
                     <div class="p-6 bg-gradient-to-r from-blue-500 to-indigo-600">
-                        <h2 class="text-gray" style="font-weight: bold;">Add Line of Business (group).</h2>
+                        <h2 class="text-warning" style="font-weight: bold;">Add Line of Business (group).</h2>
                     </div>
 
                     <form action="{{ route('store.business') }}" method="POST" enctype="multipart/form-data">
@@ -168,21 +171,103 @@
                         </div>
                     </form>
                 </div>
+                <!-- End Storing of lines of business section -->
 
+                <!-- Start Delation of lines of business section -->
                 <div class="delete-lines-of-business-form p-4 bg-white rounded shadow-sm mt-5">
                     <div class="p-6 bg-gradient-to-r from-blue-500 to-indigo-600">
-                        <h2 class="text-gray" style="font-weight: bold;">Delete Line of Business (group).</h2>
+                        <h2 class="text-warning" style="font-weight: bold;">Delete Line of Business (group).</h2>
 
                         @foreach ($groups as $group)
-                            <form action="{{route('delete.business', $group->id)}}" method="POST">
+                            <form action="{{ route('delete.business', $group->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <strong class="mr-5">{{$group->title}}</strong>
+                                <strong class="mr-5">{{ $group->title }}</strong>
                                 <button type="submit" class="delete-group">X</button>
                             </form>
                         @endforeach
                     </div>
                 </div>
+                <!-- End Delation of lines of business section -->
+
+                <!-- Start Storing of services section -->
+                <div class="store-services-section-form p-4 bg-white rounded shadow-sm mt-5">
+                    <div class="p-6 bg-gradient-to-r from-blue-500 to-indigo-600">
+                        <h2 class="text-warning" style="font-weight: bold;">Add New Service.</h2>
+                    </div>
+
+                    <form action="{{route('add.service')}}" method="POST">
+                        @csrf
+                        <div class="space-y-6">
+                            <div class="form-group">
+                                <div class="space-y-4">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="number"
+                                                class="block text-sm font-medium text-gray-700">Service Number:</label>
+                                            <input type="text"
+                                                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                                name="number" placeholder="Partner name">
+                                            @error('number')
+                                                <p class="text-danger">{{ $message }}</p>
+                                            @enderror
+                                        </div>
+                                        <div class="col">
+                                            <label for="title"
+                                                class="block text-sm font-medium text-gray-700">Service Name:</label>
+                                            <div class="mt-1 flex items-center">
+                                                <input type="text" name="title"
+                                                    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                                                @error('title')
+                                                    <p class="text-danger">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col">
+                                            <label for="content"
+                                                class="block text-sm font-medium text-gray-700">Service
+                                                Description:</label>
+                                            <div class="mt-1 flex items-center">
+                                                <textarea type="text" name="content"
+                                                    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                                                @error('content')
+                                                    <p class="text-danger">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-end">
+                                <button type="submit"
+                                    class="btn btn-outline-primary d-inline-flex align-items-center px-4 py-2 rounded-md fw-semibold">
+                                    Add Service
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- End Storing of services section -->
+
+                <!-- Start Delation of Services Section -->
+                <div class="delete-lines-of-business-form p-4 bg-white rounded shadow-sm mt-5">
+                    <div class="p-6 bg-gradient-to-r from-blue-500 to-indigo-600">
+                        <h2 class="text-warning" style="font-weight: bold;">Delete Service.</h2>
+
+                        @foreach ($services as $service)
+                            <form action="{{ route('service.delete', $service->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <strong class="mr-5">{{ $service->title }}</strong>
+                                <button type="submit" class="delete-group">X</button>
+                            </form>
+                        @endforeach
+                    </div>
+                </div>
+                <!-- End Delation of Services Section -->
             </div>
         </div>
     </div>
