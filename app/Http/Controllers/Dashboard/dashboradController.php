@@ -6,12 +6,14 @@ use App\Models\Partner;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Group;
-use Illuminate\Support\Facades\Storage;
+use App\Models\service;
+use Carbon\Laravel\ServiceProvider;
 
 class dashboradController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * Display all parteners into the mini-banner.
      */
     public function index()
     {
@@ -19,7 +21,8 @@ class dashboradController extends Controller
         if ($user) {
             $partners = Partner::all();
             $groups = Group::all();
-            return view('dashboard/dashboard', compact('partners', 'groups'));
+            $services = Service::all();
+            return view('dashboard/dashboard', compact('partners', 'groups', 'services'));
         }
         return redirect()->route('login');
     }
@@ -34,6 +37,7 @@ class dashboradController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * Store new partners.
      */
     public function storeBanner(Request $request)
     {
@@ -82,6 +86,7 @@ class dashboradController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * Remove a specific parteners.
      */
     public function destroy(string $id)
     {
@@ -104,6 +109,9 @@ class dashboradController extends Controller
     //***************************************************************************//
     //**************** Start Lines of Business Coding (Group) *******************//
 
+    /**
+     * Store new lines of business (group).
+     */
     public function store_business(Request $request)
     {
         $request->validate([
@@ -124,17 +132,49 @@ class dashboradController extends Controller
                 'url' => $request->input('url'),
                 'group_logo' => $path,
             ]);
-            return redirect()->back()->with('success', 'A new business add successfully');
+            return redirect()->back()->with('success', 'A new business Stored successfully');
         }
         return redirect()->route('login');
     }
 
+    /**
+     * Remove a specific line of business.
+     */
     public function deleteGroup(Group $group) 
     {
         $user = auth()->user();
         if ($user) {
             $group->delete();
             return redirect()->back()->with('success', 'The Group Deleted Successfully.');
+        }
+        return redirect()->route('login');
+    }
+
+    //***************************************************************************//
+    //********************* Start Services Section Coding **********************//
+
+    public function store_service(Request $request)
+    {
+        $request->validate([
+            'number' => 'required|string|max:2',
+            'title' => 'required|string|min:10|max:255',
+            'content' => 'required|string|min:50'
+        ]);
+
+        $user = auth()->user();
+        if ($user) {
+            Service::create($request->all());
+            return redirect()->back()->with('success', 'The Services has been Stored Successfully.');
+        }
+        return redirect()->route('login');
+    }
+
+    public function delete_service(Service $service)
+    {
+        $user = auth()->user();
+        if ($user) {
+            $service->delete();
+            return redirect()->back()->with('success', 'The Service Deleted Successfully.');
         }
         return redirect()->route('login');
     }

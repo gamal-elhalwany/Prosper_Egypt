@@ -177,46 +177,15 @@
                     </div>
                 </div>
 
+                @foreach ($services as $service)
                 <div class="col-md-6 service-grid">
                     <div class="service">
-                        <h1>01</h1>
-                        <h3>Facility Management</h3>
-                        <p>Facility management encompasses the comprehensive maintenance and operation of buildings and
-                            infrastructure to ensure a safe, efficient, and comfortable environment. This includes a
-                            wide range of services such as Commercial Cleaning, pest Control, Furnishing and
-                            landscaping.</p>
+                        <h1>{{$service->number}}</h1>
+                        <h3>{{$service->title}}</h3>
+                        <p>{{$service->content}}</p>
                     </div>
                 </div>
-
-                <div class="col-md-6 service-grid">
-                    <div class="service">
-                        <h1>02</h1>
-                        <h3>Security Services</h3>
-                        <p>Security services are essential for protecting people, property, and assets. These services
-                            encompass a wide range of activities and solutions designed to prevent unauthorized access,
-                            detect and respond to threats, and ensure a safe environment.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 service-grid">
-                    <div class="service">
-                        <h1>03</h1>
-                        <h3>Technology Solutions</h3>
-                        <p>Our technology solutions are designed to drive innovation and efficiency in your business
-                            operations. We offer a comprehensive range of services and products tailored to meet the
-                            unique needs of various industries.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 service-grid">
-                    <div class="service">
-                        <h1>04</h1>
-                        <h3>General Supplies</h3>
-                        <p>Our general supplies are sourced from trusted manufacturers, guaranteeing quality and
-                            reliability. Trust us to deliver the essentials that support your daily operations and
-                            contribute to a smooth and efficient workflow</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

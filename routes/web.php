@@ -49,8 +49,11 @@ Route::middleware('auth')->group(function () {
 
     // Lines of business routes.
     Route::post('/dashboard/lines-of-business', [dashboradController::class, 'store_business'])->name('store.business');
-
     Route::delete('/dashboard/lines-of-business/{group}/delete', [dashboradController::class, 'deleteGroup'])->name('delete.business');
+
+    // Services Section Routes.
+    Route::post('/dashboard/services', [dashboradController::class, 'store_service'])->name('add.service');
+    Route::delete('/dahsboard/services/{service}/delete', [dashboradController::class, 'delete_service'])->name('service.delete');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
